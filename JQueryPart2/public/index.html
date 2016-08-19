@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Global Library</title>
+    <meta charset="utf-8">
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="includes/css/styles.css" rel="stylesheet">
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="includes/js/modernizr-2.6.2.min.js"></script>
+    <!-- Using google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!--Header section -->
+    <div class="navbar navbar-default navbar-fixed-top" id="header">
+        <a id="brandName" href="#"><span>Friends Library<sub>Explore today, Discover tomorrow!</sub></span></a>
+    </div>
+    <div class="container" id="main">
+        <!-- Div tag for containing three column data -->
+        <div class="row">
+            <!-- First column -->
+            <div class="col-sm-3 feature">
+                <!-- For the firt panel -->
+                <div class="panel panel-default" id="threeColumns">
+                    <div class="panel-heading text-center height">
+                        <h3 class="panel-title">Add new Books</h3>
+                    </div>
+                    <a href="#myModal" role="button" id="addBooks" class="btn btn-warning btn-block height" data-toggle="modal">Add Books</a>
+                    <!-- Modal window -->
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title">Add Book&nbsp<span class="glyphicon glyphicon-book"></span></h3>
+                                </div>
+                                <form class="horizontal-form" id="inputForm" validate>
+                                    <div class="modal-body modalbody">
+                                        <div class="form-group col-sm-12">
+                                            <label class="col-sm-4 control-label" for="bookname">Book Name</label>
+                                            <input class="col-sm-8 form-control" type="text" id="bookname" required/>
+                                            <!-- <br> -->
+                                            <label class="col-sm-4 control-label" for="authorname">Author Name</label>
+                                            <input class="col-sm-8 form-control" type="text" id="authorname" required/>
+                                            <br>
+                                            <label class="col-sm-4 control-label" for="publishername">Publisher Name</label>
+                                            <input class="col-sm-8 form-control" type="text" id="publishername" required>
+                                            <br>
+                                            <label class="col-sm-4 control-label" for="publishedyear">Published year</label>
+                                            <input class="col-sm-8 form-control" type="text" pattern="[0-9]{4}" title="Enter year in YYYY format" id="publishedyear" required>
+                                            <br>
+                                            <br>
+                                            <!-- <label class="col-sm-4 control-label" for="type">Type</label>
+                                            <input class="col-sm-8 form-control" type="text" id="type" required> -->
+                                            <label class="col-sm-4 control-label" for="type">Type</label>
+                                            <span class="col-sm-8 form-control"><input type="radio" name="type" id="fiction" value="Fiction" required>Fiction &nbsp
+                                            <input type="radio" name="type" id="nonfiction" value="Non-Fiction">Non-Fiction</span>
+                                            <br>
+                                            <label class="col-sm-4 control-label" for="Genres">Genres</label>
+                                            <!-- <input class="col-sm-8 form-control" type="text" id="Genres" required> -->
+                                            <select class="col-sm-8 form-control" id="Genres" required disabled>
+                                            </select>
+                                            <br>
+                                            <label class="col-sm-4 control-label" for="language">Language</label>
+                                            <input class="col-sm-8 form-control" type="text" id="language" required>
+                                            <br>
+                                            <label class="col-sm-4 control-label" for="Price">Price</label>
+                                            <input class="col-sm-8 form-control" type="text" id="price" title="Insert as 000.00 $" pattern="\d+\.\d{2}\s\$" required>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer editFooter">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second column -->
+            <div class="col-sm-6 feature">
+                <div class="panel panel-default text-center" id="threeColumns">
+                    <div class="panel-heading height" id="searchtextboxpadding">
+                        <h3 class="panel-title"><input class="text-center" id="searchtextbox" type="text" placeholder="Search here.."></h3>
+                    </div>
+                    <button type="button" id="search" class="btn btn-danger btn-block height">Search</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Third column -->
+            <div class="col-sm-3 feature text-center">
+                <div class="panel panel-default" id="threeColumns">
+                    <div class="panel-heading height">
+                        <h3 class="panel-title">Whole Book Details</h3>
+                    </div>
+                    <div></div>
+                    <button type="button" id="loadDetails" class="btn btn-info btn-block height">Load</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Displaying data -->
+        <div class="content-display table-responsive">
+            <table id="wholeTable" class="table table-bordered text-center">
+            </table>
+        </div>
+        <!-- Template for inserting data -->
+        <template id="Bookheading">
+            <thead>
+                <tr class="active table-striped">
+                    <td>ID</td>
+                    <td>Book Name</td>
+                    <td>Author Name</td>
+                    <td>Publisher Name</td>
+                    <td>Type</td>
+                    <td>Genres</td>
+                    <td>Language</td>
+                    <td>Published Year</td>
+                    <td>Price</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+        </template>
+        <template id="allBookList">
+            <tbody>
+                <tr>
+                    <th class="table-bordered text-center">{{id}}</th>
+                    <th class="table-bordered text-center">{{Book_name}}</th>
+                    <th class="table-bordered text-center">{{Author_name}}</th>
+                    <th class="table-bordered text-center">{{Publisher_name}}</th>
+                    <th class="table-bordered text-center">{{Type}}</th>
+                    <th class="table-bordered text-center">{{Genres}}</th>
+                    <th class="table-bordered text-center">{{Language}}</th>
+                    <th class="table-bordered text-center">{{Published_year}}</th>
+                    <th class="table-bordered text-center">{{Price}}</th>
+                    <th class="table-bordered">
+                        <a href="#myModal" role="button" class="btn btn-warning btn-block height" id="editButton" data-id={{id}} data-toggle="modal">Edit</a>
+                    </th>
+                    <th>
+                        <button data-id={{id}} id="deleteButton" type="button" class="btn btn-danger">Delete</button>
+                    </th>
+                </tr>
+            </tbody>
+        </template>
+        <!-- end templates -->
+    </div>
+    <!-- Next and prev button -->
+    <div class="container pageButtons">
+        <button class="btn btn-primary prevButton">Prev</button>
+        <button class="btn btn-primary nextButton">Next</button>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p class="footerfont">Website for searching Book details @!
+            <br> Contact us<a href="#">here</a></p>
+        <!-- Each font awesome icons for social links -->
+        <a href="https://www.amazone.com"><i class="fa fa-amazon" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-facebook" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-linkedin-square" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-google-plus" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-instagram" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-skype" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a>
+        <a href="https://www.amazone.com"><i class="fa fa-youtube" style="font-size:48px;"></i></a>
+        <!-- footer tag ends here -->
+    </footer>
+    <!-- First try for the online version of jQuery-->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- If no online access, fallback to our hardcoded version of jQuery -->
+    <script>
+    window.jQuery || document.write('<script src="includes/js/jquery-3.1.0.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="includes/js/script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js"></script>
+</body>
+
+</html>

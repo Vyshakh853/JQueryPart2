@@ -1,0 +1,148 @@
+{
+  "Books": [
+    {
+      "Book_name": "Tran",
+      "Author_name": "Wolf",
+      "Publisher_name": "Zilphur",
+      "Type": "Non-Fiction",
+      "Genres": "Journals",
+      "Language": "English",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1997,
+      "Price": "10604.30 $",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "Book_name": "Talley",
+      "Author_name": "Lambert",
+      "Publisher_name": "Zoid",
+      "Type": "Fiction",
+      "Genres": "Travel",
+      "Language": "Malayalam",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1982,
+      "Price": "11403.97 $"
+    },
+    {
+      "id": 3,
+      "Book_name": "Love",
+      "Author_name": "Kemp",
+      "Publisher_name": "Microluxe",
+      "Type": "Non-Fiction",
+      "Genres": "Poetry",
+      "Language": "English",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1980,
+      "Price": "10655.10 $"
+    },
+    {
+      "id": 4,
+      "Book_name": "Beryl",
+      "Author_name": "Bowman",
+      "Publisher_name": "Neocent",
+      "Type": "Fiction",
+      "Genres": "History",
+      "Language": "Chinese",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1983,
+      "Price": "9527.90 $"
+    },
+    {
+      "id": 5,
+      "Book_name": "Mcgowan",
+      "Author_name": "Mason",
+      "Publisher_name": "Zipak",
+      "Type": "Non-Fiction",
+      "Genres": "Horror",
+      "Language": "Hindi",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1997,
+      "Price": "10977.41 $"
+    },
+    {
+      "id": 6,
+      "Book_name": "Amelia",
+      "Author_name": "Guy",
+      "Publisher_name": "Digigen",
+      "Type": "Fiction",
+      "Genres": "Satire",
+      "Language": "Malayalam",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 2002,
+      "Price": "11650.36 $"
+    },
+    {
+      "id": 7,
+      "Book_name": "Lindsay",
+      "Author_name": "Mccarty",
+      "Publisher_name": "Frenex",
+      "Type": "Fiction",
+      "Genres": "Poetry",
+      "Language": "English",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1971,
+      "Price": "7423.82 $"
+    },
+    {
+      "id": 8,
+      "Book_name": "Opal",
+      "Author_name": "Clarke",
+      "Publisher_name": "Corecom",
+      "Type": "Non-Fiction",
+      "Genres": "Autobiography",
+      "Language": "Tamil",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 2004,
+      "Price": "6433.15 $"
+    },
+    {
+      "id": 9,
+      "Book_name": "Cruz",
+      "Author_name": "Ray",
+      "Publisher_name": "Dognosis",
+      "Type": "Non-Fiction",
+      "Genres": "Action and adventure",
+      "Language": "Malayalam",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1979,
+      "Price": "9394.90 $"
+    },
+    {
+      "Book_name": "Young",
+      "Author_name": "Grant",
+      "Publisher_name": "Gorganic",
+      "Type": "Non-Fiction",
+      "Genres": "Mystery",
+      "Language": "Spanish",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1995,
+      "Price": "600.00 $",
+      "id": 10
+    },
+    {
+      "Book_name": "Cruz",
+      "Author_name": "Aneesh",
+      "Publisher_name": "Dognosis",
+      "Type": "Non-Fiction",
+      "Genres": "Action and adventure",
+      "Language": "Malayalam",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1979,
+      "Price": "9394.90 $",
+      "id": 11
+    },
+    {
+      "Book_name": "Cruz",
+      "Author_name": "Aneesh",
+      "Publisher_name": "Dognosis",
+      "Type": "Non-Fiction",
+      "Genres": "Action and adventure",
+      "Language": "Malayalam",
+      "Book_cover": "http://placehold.it/32x32",
+      "Published_year": 1979,
+      "Price": "9394.90 $",
+      "id": 12
+    }
+  ]
+}
